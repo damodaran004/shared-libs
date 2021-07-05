@@ -3,7 +3,7 @@ def call (mexusRepo) {
   def artifactId = pom.artifactId
   def groupId = pom.groupId
   def repo = nexusRepo
-  nexusArtifactUploader artifacts: [[artifactId: artifactId, classifier: '', file: "target/$(artifactId)-${pom.version}.war", type: 'war']], 
+  nexusArtifactUploader artifacts: [[artifactId: artifactId, classifier: '', file: "target/${artifactId}-${pom.version}.war", type: 'war']], 
   credentialsId: 'nexus3', 
   groupId: groupId, 
   nexusUrl: '172.31.36.70:8081', 
