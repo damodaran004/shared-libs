@@ -1,4 +1,4 @@
-def call (mexusRepo) {
+def call (nexusRepo) {
   def pom = readMavenPom file: 'pom.xml'
   def artifactId = pom.artifactId
   def groupId = pom.groupId
